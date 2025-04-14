@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1807612387",
+    "project_id": "kotprog-7b0c0",
+    "storage_bucket": "kotprog-7b0c0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1807612387:android:5363c721d593644ac3c8d6",
+        "android_client_info": {
+          "package_name": "com.example.kotprog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1807612387-122iga1756us5mjidrgi7a79dc102dqa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kotprog",
+            "certificate_hash": "8e893b14e0462596e66db1612c89b9e7574668dc"
+          }
+        },
+        {
+          "client_id": "1807612387-vfjtginqhahhmuil68e8hdkjsnf79lli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ9Q0b2GG1nT0mcQjJ47fn_HnR-Qznjg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1807612387-vfjtginqhahhmuil68e8hdkjsnf79lli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
