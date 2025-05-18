@@ -1,5 +1,7 @@
 package com.example.kotprog;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -86,6 +88,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View view) {
 
+        // Gomb animáció (ugrás jellegű)
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.1f, 1f);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(view, "scaleY", 1f, 1.1f, 1f);
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(scaleX, scaleY);
+        animatorSet.setDuration(200);
+        animatorSet.start();
+
         String emailAddress = emailAddressET.getText().toString();
         String password = passwordET.getText().toString();
 
@@ -95,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Log.d(LOG_TAG, "Bejelentkezett: " + emailAddress + ", jelszó: " + password);
+                    Intent intent = new Intent(MainActivity.this, UserPageActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
                 else {
                     Log.d(LOG_TAG, "Belépés NEM volt sikeres");
@@ -102,10 +115,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public void register(View view) {
+
         Intent intent = new Intent(this, RegisterActivity.class);
         intent.putExtra("SECRET_KEY", SECRET_KEY);
         startActivity(intent);
